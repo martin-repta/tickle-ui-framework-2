@@ -1,0 +1,61 @@
+{
+  "editor.formatOnSave": true,
+  "javascript.validate.enable": false,
+  "javascript.format.enable": false,
+
+  "editor.tabSize": 2,
+  "typescriptHero.imports.organizeOnSave": true,
+  "typescriptHero.imports.removeTrailingIndex": true,
+  "typescriptHero.imports.multiLineWrapThreshold": 160,
+  // "typescriptHero.imports.disableImportRemovalOnOrganize": true,
+  // Ignore the warning
+  "typescriptHero.imports.grouping": [
+    {
+      "identifier": "/^(react|yup|classnames|socket.io-client)$/",
+      "order": "asc"
+    },
+    {
+      "identifier": "/^(react-|redux)/",
+      "order": "asc"
+    },
+    "Modules", // Example: import ... from 'vscode',
+    {
+      "identifier": "/^(actions|reducers)/",
+      "order": "asc"
+    },
+    {
+      "identifier": "/^material-ui/",
+      "order": "asc"
+    },
+    {
+      "identifier": "/^(framework|models|src/framework|src/models)/",
+      "order": "asc"
+    },
+    {
+      "identifier": "/^(containers|src/containers)/",
+      "order": "asc"
+    },
+    "Workspace", // Example: import ... from '../server';
+    "Plains" // Example: import 'reflect-metadata;
+  ],
+
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "none",
+  "prettier.useTabs": false,
+  "prettier.printWidth": 100,
+  "prettier.javascriptEnable": ["javascript", "javascriptreact"],
+  "prettier.semi": true,
+  "prettier.bracketSpacing": true,
+  "prettier.typescriptEnable": ["typescript", "typescriptreact"],
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/obj": true,
+    "**/bin": true,
+    "**/.vs": true
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
+}

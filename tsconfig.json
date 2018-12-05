@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+      "paths": { "*": ["types/*"] },
     "baseUrl": ".",
     "outDir": "build/dist",
     "module": "esnext",
@@ -9,7 +10,7 @@
     "allowJs": true,
     "jsx": "react",
     "moduleResolution": "node",
-    "rootDir": "src",
+    "rootDirs": ["src", "stories"],
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
