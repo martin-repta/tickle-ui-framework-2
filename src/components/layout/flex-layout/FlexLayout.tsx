@@ -5,10 +5,22 @@ import { WithStyles, withStyles } from '@material-ui/core/styles';
 
 import styles, { ClassKeys } from './styles';
 
-export type justifyContentValue = 'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around' | 'space-evenly';
+export type justifyContentValue =
+  | 'flex-start'
+  | 'flex-end'
+  | 'center'
+  | 'space-between'
+  | 'space-around'
+  | 'space-evenly';
 export type flexDirectionValue = 'row' | 'row-reverse' | 'column' | 'column-reverse';
 export type alignItemsValue = 'flex-start' | 'flex-end' | 'center' | 'baseline' | 'stretch';
-export type alignContentValue = 'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around' | 'stretch';
+export type alignContentValue =
+  | 'flex-start'
+  | 'flex-end'
+  | 'center'
+  | 'space-between'
+  | 'space-around'
+  | 'stretch';
 export type flexWrapValue = 'nowrap' | 'wrap' | 'wrap-reverse';
 
 export interface FlexLayoutProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -25,7 +37,17 @@ export interface FlexLayoutProps extends React.HTMLAttributes<HTMLDivElement> {
 
 class FlexLayout extends React.PureComponent<FlexLayoutProps & WithStyles<ClassKeys>> {
   private resolveClassNames() {
-    const { classes, className, flexDirection, flexWrap, justifyContent, alignItems, alignContent, fullWidth, fullHeight } = this.props;
+    const {
+      classes,
+      className,
+      flexDirection,
+      flexWrap,
+      justifyContent,
+      alignItems,
+      alignContent,
+      fullWidth,
+      fullHeight
+    } = this.props;
 
     return classNames(
       //
@@ -44,7 +66,7 @@ class FlexLayout extends React.PureComponent<FlexLayoutProps & WithStyles<ClassK
     );
   }
 
-  render() {
+  public render() {
     const { children, style, component, componentProps } = this.props;
     const Component = component || 'div';
     const props = {
